@@ -62,19 +62,19 @@
 
 		<div id="PicCont">
 			<div id="showPic">
-				<a href=""><img src="images/p1.jpg" id="nextPic"></a>
+				<a href=""><img src="images/p1.jpg"></a>
 				<a href=""><img src="images/p2.jpg"></a>
 				<a href=""><img src="images/p3.jpg"></a>
-				<a href=""><img src="images/p4.jpg" id="prevPic"></a>
-				<a href=""><img src="images/p5.jpg" id="currentPic"></a>
+				<a href=""><img src="images/p4.jpg"></a>
+				<a href=""><img src="images/p5.jpg"></a>
 			</div>
-			<!-- <ul id="picPot">
-				<li class="currentPot">1</li>
+			<ul id="imgNum">
+				<li class="onSelect">1</li>
 				<li>2</li>
 				<li>3</li>
 				<li>4</li>
 				<li>5</li>
-			</ul> -->
+			</ul>
 		</div>
 		<ul>
 			<li>	<a href="">医院租赁人员转雇员结果公示</a>	<span class="time">[11-28]</span>	</li>
@@ -269,72 +269,6 @@
 <!-- / footer -->
 	</div>
 <!-- javascript -->
-
- 	<script src="js/jquery.slides.min.js"></script>
-
-	
-  	<script>
-  		$(function(){
-			var page = 1;
-			var i = 3;
-			$("span.RButton").click(function(){
-				var $parent = $(this).parents("div#EIPic");
-				
-				var $show = $parent.find("div.picContList");
-				var $picCont = $parent.find("div.picCont");
-				var vWidth = $picCont.width();
-				console.log(vWidth);
-				var len = $show.find("li").length;
-				console.log();
-				if(	!$show.is(":animated")	){
-					if(	page == i	){
-						$show.animate({left: '0px'}, "fast");
-						page = 1;
-					}	else	{
-						$show.animate({left: '-=' + vWidth / 5}, "slow");
-						page++;
-					}
-				}
-			});
-			$("span.LButton").click(function(){
-				var $parent = $(this).parents("div#EIPic");
-				var $show = $parent.find("div.picContList");
-				var $picCont = $parent.find("div.picCont");
-				var vWidth = $picCont.width();
-				var len = $show.find("li").length;
-				if(	!$show.is(":animated")	){
-					if(	 page == 1	){
-						$show.animate({left: '-=' + (vWidth / 5) * 2}, "fast");
-						page = i;
-					}	else	{
-						$show.animate({left: '+=' + vWidth / 5}, "slow");
-						page--;
-					}
-				}
-			});
-		});
-  	</script>
-	<script>
-    	$(function() {
-      	$('#showPic').slidesjs({
-        	width: 212,
-        	height: 140,
-        	start: 1,
-        	play: {
-          		active: false,
-          		auto: true,
-          		interval: 4000,
-          		swap: true,
-          		restartDelay: 2500
-        		}
-      		});
-      	});
-  	</script>
-	<!-- <script type="text/javascript">
-		var animPic = $(function(){
-			var picChil = $('#showPic #currentPic');
-				picChil.animate({left: '-250px'}, "slow");
-		}, animPic);
-	</script> -->
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

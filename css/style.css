@@ -105,8 +105,8 @@ h2 span {
 	overflow: hidden;
 }
 
-.normalBlock a {
-	text-decoration: none;
+.normalBlock a:hover {
+	text-decoration: underline;
 }
 
 .titleBg {
@@ -177,23 +177,25 @@ h2 span {
 	float: left;
 }
 #PicCont {
+	position: relative;
 	width: 200px;
 	height: 160px;
 	margin: 15px 10px;
 	padding: 10px 24px;
 	background: #eeeeee;
+	overflow:  hidden;
 }
 #showPic {
-
 	position: relative;
-	width: 210px;
+	width: 10000px;
 	height: 140px;
 	margin: 15px -6px;
 }
 #showPic img {
-	position: absolute;
+	display:  inline-block;
 	width: 210px;
 	height: 140px;
+	margin-right: 20px;
 }
 .slidesjs-pagination {
 	position: relative;
@@ -223,18 +225,24 @@ h2 span {
 	padding: 0px 4px;
 	margin-top: -4px;
 }
-#picPot {
+#imgNum {
+	position: absolute;
 	float: right;
+	top: 151px;
+	right: 9px;
+	padding-left: 0px;
 	width: 120px;
 	height: 15px;
 	background: url(../images/SPBar.png) no-repeat;
 }
-#picPot li {
+#imgNum li {
 	float: left;
 	width: 12px;
 	height: 12px;
+	padding: 0px 5px;
+	list-style: none;
 }
-#picPot .currentPot {
+#imgNum .onSelect {
 	background: #ff0000;
 }
 /*===  ===*/
